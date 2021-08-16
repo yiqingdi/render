@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Gemini","version":"8.6.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="Github Pages    Github Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页，展示出来。   操作如下：1，注册 Github 账号，然后在 Github 中创建一个以 .github.io 结尾的 Repository。   Repository n">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用hexo搭建个人博客">
+<meta property="og:url" content="http://example.com/2021/08/13/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="一顷地">
+<meta property="og:description" content="Github Pages    Github Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页，展示出来。   操作如下：1，注册 Github 账号，然后在 Github 中创建一个以 .github.io 结尾的 Repository。   Repository n">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-08-13T00:43:10.000Z">
+<meta property="article:modified_time" content="2021-08-13T01:13:36.974Z">
+<meta property="article:author" content="yiqingdi">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/08/13/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://example.com/2021/08/13/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/","path":"2021/08/13/使用hexo搭建个人博客/","title":"使用hexo搭建个人博客"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>使用hexo搭建个人博客 | 一顷地</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">一顷地</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-overview">
+            <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="yiqingdi"
+      src="/images/avatar1.jpg">
+  <p class="site-author-name" itemprop="name">yiqingdi</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/13/%E4%BD%BF%E7%94%A8hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar1.jpg">
+      <meta itemprop="name" content="yiqingdi">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一顷地">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          使用hexo搭建个人博客
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-08-13 08:43:10 / 修改时间：09:13:36" itemprop="dateCreated datePublished" datetime="2021-08-13T08:43:10+08:00">2021-08-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%BB%BA%E7%AB%99/" itemprop="url" rel="index"><span itemprop="name">建站</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Github Pages</p>
+<p>   Github Pages 其实本身就是 Github 提供的博客服务。 我们在 Github 中创建一个特定格式的 Repository，Github Pages 就会将里面的信息生成一个网页，展示出来。<br>   操作如下：<br>1，注册 Github 账号，然后在 Github 中创建一个以 .github.io 结尾的 Repository。<br>   Repository name: ryanluoxu.github.io<br>   勾选 Initialize this repository with a README<br>   Create repository<br>2，简单地编辑一下 README.md 这个文档。 比如添加：I am trying to create my own blog.. 保存(Commit changes)。<br>3，打开网页：ryanluoxu.github.io 这里就可以看到 README.md 里的内容了。<br>   如果没有太多的要求，其实直接用 README.md 来写博客也是不错的。<span id="more"></span><br>   这个生成好的 Repository 就是用来存放博客内容的地方，也只有这个仓库里的内容，才会被 ryanluoxu.github.io 这个网页显示出来。</p>
+<p> Hexo</p>
+<p> Hexo 是一个博客框架。它把本地文件里的信息生成一个网页。如果不需要放在网上给别人看，就没 Github Pages 什么事了。<br> 使用 Hexo 之前，需要先安装 Node.js 和 Git。</p>
+<p> 操作如下：<br>    1，安装 Node.js</p>
+<pre><code>前往 https://nodejs.org/en/
+
+点击 8.9.1 LTS 下载
+
+安装
+
+打开 Command Prompt， 输入 node -v
+
+得到：v8.9.1
+
+安装成功
+
+2，安装 Git
+
+ 前往 https://git-scm.com/
+
+ 点击 Downloads
+
+ 点击 Windows
+
+ 一般情况，下载会自动开始。如果没有，就点击 click here to download manually
+
+ 安装
+
+ 打开 Command Prompt， 输入 git --version
+
+ 得到：git version 2.15.0.windows.1
+</code></pre>
+<p>   安装成功</p>
+<p>   额外说明：如果 Git –version 指令不管用，可能需要到 Environment Variable 那里添加 Path。</p>
+<p>   3，安装 Hexo</p>
+<pre><code>打开 Command Prompt
+
+输入 npm install -g hexo-cli
+
+回车开始安装
+
+输入 hexo -v
+
+得到 hexo-cli: 1.0.4 等一串数据
+</code></pre>
+<p>   安装成功</p>
+<p>   4，创建本地博客</p>
+<pre><code> 在D盘下创建文件夹 blog
+
+ 鼠标右键 blog，选择 Git Bash Here。 如果没有安装 Git，就不会有这个选项。
+
+ Git Bash 打开之后，所在的位置就是 blog 这个文件夹的位置。（/d/blog）
+
+ 输入 hexo init 将 blog 文件夹初始化成一个博客文件夹。
+
+ 输入 npm install 安装依赖包。
+
+ 输入 hexo g 生成（generate）网页。 由于我们还没创建任何博客，生成的网页会展示 Hexo 里面自带了一个 Hello World 的博客。
+
+ 输入 hexo s 将生成的网页放在了本地服务器（server）。
+
+ 浏览器里输入 http://localhost:4000/ 。 就可以看到刚才的成果了。
+
+回到 Git Bash，按 Ctrl+C 结束。
+</code></pre>
+<p>   此时再看 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 就是无法访问了。</p>
+<p>   5，发布一篇博客</p>
+<pre><code> 继续在 Git Bash 里，所在路径还是 /d/blog。输入 hexo new &quot;My First Post&quot;
+ 在 D:\blog\source_posts 路径下，会有一个 My-First-Post.md 的文件。 编辑这个文件，然后保存。
+ 回到 Git Bash，输入 hexo g
+ 输入 hexo s
+ 前往 http://localhost:4000/ 查看成果。
+回到 Git Bash，按 Ctrl+C 结束。
+</code></pre>
+<p>  将本地 Hexo 博客部署在 Github 上</p>
+<p>   前面两个部分，我们已经有了本地博客，和一个能托管这些资料的线上仓库。只要把本地博客部署（deploy）在我们的 Github 对应的 Repository 就可以了。</p>
+<p>   操作如下：</p>
+<pre><code>1，获取 Github 对应的 Repository 的链接。
+
+  登陆 Github，进入到 ryanluoxu.github.io
+
+  点击 Clone or download
+
+  复制 URL 待用
+
+  我的是 https://github.com/Ryanluoxu/ryanluoxu.github.io.git
+  
+2，修改博客的配置文件
+  
+  打开配置文件 /d/blog/_config.yml （使用 bash 里的 vi 或者 notepad++）
+  找到 #Deployment，填入以下内容：
+  deploy:  
+  type: git  
+  repository: https://github.com/Ryanluoxu/ryanluoxu.github.io.git  
+  branch: master
+  
+3，部署
+  
+  回到 Git Bash
+
+  输入 npm install hexo-deployer-git --save 安装 hexo-deployer-git 此步骤只需要做一次。
+
+  输入 hexo d
+
+  得到 INFO Deploy done: git 即为部署成功
+
+  之前我们创建的 ReadMe.md 会被自动覆盖掉。
+  
+4，查看成果
+</code></pre>
+<p> Hexo常用代码</p>
+<p> hexo clean #清除之前生成的东西<br> hexo generate  #生成静态文章，缩写hexo g<br> hexo deploy  #部署文章，缩写hexo d</p>
+<pre><code>          注：本文转自 ryanluoxu ，感谢 ryanluoxu 
+</code></pre>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/08/03/vps%E5%B8%B8%E7%94%A8%E8%84%9A%E6%9C%AC%E5%90%88%E9%9B%86/" rel="prev" title="vps常用脚本合集">
+                  <i class="fa fa-chevron-left"></i> vps常用脚本合集
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">yiqingdi</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
